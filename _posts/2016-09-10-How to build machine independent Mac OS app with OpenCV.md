@@ -65,7 +65,7 @@ $ make install
 Then instead of a bunch of `.dylib` files. you get `.a` files.
 Next, in Xcode project setting, embed these `.a` files instead of `.dylib` files.
 Problem solved? BOOM!
-<img src="/images/build-indenpendent-opencv-mac-app.png" alt="">
+<img src="{{ site.url }}/images/build-indenpendent-opencv-mac-app.png" alt="">
 
 If you search *Undefined symbols* for `architecture x86_64: "_gzclose", reference from ....`, the first few answers will talk about the Xcode c++ compiler. In **Build Setting – Apple LLVM 7.1 – language C++**, change c++ compiler library to **compiler default**. Unfortunately, it doesn’t help.
 
