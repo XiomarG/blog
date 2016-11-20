@@ -92,14 +92,14 @@ So in my code, I need to predict class by a histogram vector. My prediction func
 ...
 void predict(string modelPath, Mat& hist) {
 
-	const char *MODEL_FILE = modelPath.c_str();
+    const char *MODEL_FILE = modelPath.c_str();
     if ((this->SVMModel = svm_load_model(MODEL_FILE)) == 0) {
         this->modelLoaded = false;
         fprintf(stderr, "Can't load SVM model %s", MODEL_FILE);
         return;
     }
 
-	struct svm_node *svmVec;
+    struct svm_node *svmVec;
     svmVec = (struct svm_node *)malloc((hist.cols+1)*sizeof(struct svm_node));
     int j;
     for (j = 0; j < hist.cols; j++) {
