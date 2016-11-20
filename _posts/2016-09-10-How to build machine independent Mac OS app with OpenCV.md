@@ -3,7 +3,7 @@ layout: post
 title: How to build machine independent Mac OS app with OpenCV
 description: "A brief solution to build a Mac OS app, which utilizes OpenCV, that can run in any machine."
 modified: 2016-11-18
-tags: [MacOS OpenCV]
+tags: [MacOS, OpenCV]
 image:
   feature: abstract-3.jpg
   credit: dargadgetz
