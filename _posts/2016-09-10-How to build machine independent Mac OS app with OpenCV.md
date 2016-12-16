@@ -43,7 +43,7 @@ Then, in **Build Setting – Search Paths**, add `/usr/local/include` to **Heade
 Now you should be able to `#include "opencv2/opencv.hpp"` in your .h file.
 
 There is no tutorial/example online (as far as I know) that guides you how to access each frame and process them. Thanks to that I have done similar things for iOS, after a couple of hours of debug, I got it working. 
-[I have a demo project for that.](https://xiomarg.github.com)
+[I have a demo project for that.](https://github.com/XiomarG/VideoFrameProcessDemo)
 
 
 ## Step 3: Make the app machine-independent
@@ -62,6 +62,8 @@ $ cmake -DBUILD_SHARED_LIBS=OFF ..
 $ make
 $ make install
 ```
+EDIT: (2016-12-15 it seems the latest OSX doesn't have QTKit installed. When I tried to follow these steps in my 2016 mac book pro, during make it threw error that QTKit.h cannot be found. I googled some solution but none works and they are mostly for OpenCV3. So my guess is only in OpenCV3 it's fixed. To continue using OpenCV2, I have put my built OpenCV2 with static library to a [repository](https://github.com/XiomarG/))
+
 Then instead of a bunch of `.dylib` files. you get `.a` files.
 Next, in Xcode project setting, embed these `.a` files instead of `.dylib` files.
 Problem solved? BOOM!
