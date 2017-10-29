@@ -5,7 +5,7 @@ description: "Using libsvm in OpenCV 101."
 modified: 2016-11-18
 tags: [C++, OpenCV, SVM]
 image:
-  feature: abstract-3.jpg
+  feature: abstract-4.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 ---
