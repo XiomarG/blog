@@ -5,6 +5,7 @@ description: "Keep records of how I did it."
 modified: 2017-10-29
 tags: [dlib, iOS, xcode]
 image:
+  path: https://github.com/XiomarG/blog/blob/gh-pages/images/abstract-7.jpg
   feature: abstract-7.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/

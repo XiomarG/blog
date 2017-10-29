@@ -5,6 +5,7 @@ description: "A brief solution to build a Mac OS app, which utilizes OpenCV, tha
 modified: 2016-11-18
 tags: [MacOS, OpenCV]
 image:
+  path: https://github.com/XiomarG/blog/blob/gh-pages/images/abstract-3.jpg
   feature: abstract-3.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
