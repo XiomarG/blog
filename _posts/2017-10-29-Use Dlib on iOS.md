@@ -41,3 +41,22 @@ add dlib/all/source.cpp to your project sources list(CXXFILES)
 ```
 jpeglib.h file not found
 ```
+Initially I tried to look for where the <jpeglib.h> was included. I found that in the tutorial it set preprocessor macro DLIB_JPEG_SUPPORT. And in the code, it said 
+```
+#ifdef DLIB_JPEG_STATIC
+#   include "../external/libjpeg/jpeglib.h"
+#else
+#   include <jpeglib.h>
+#endif
+```
+I thought it was because that I didn't compile dlib with this `DLIB_JPEG_STATIC` set. But I was wrong.
+Anyway, after about 10 hours try/error, I released that my dlib archive file was in x86_64 architecture. I then went back to the tutorial and read line by line.
+
+After 
+```
+cmake -G Xcode ..
+cmake --build . --config Release
+```
+There is a libdlib.a in Release folder. This is not the one I suppose to use. The architecture was by default macos.
+I should open the Xcode project in build/dlib_build, change the project setting (not the target setting!), use architecture = arm64, create new schema for release, then run it. Now there is a new folder called `/build/dlib_build/Release-iphoneos`. Inside it there is a new libdlib.a. This is the one I should use.
+*hint: at this time the error was actually `symbol not found for arm64.... libdlib.a is built for architecture other than arm64...` something like that.*
